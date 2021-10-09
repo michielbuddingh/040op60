@@ -1,0 +1,9 @@
+._040op60rotated {
+    transform: rotate(90deg) !important;
+    width: 100vh !important;
+    height: 100vw !important;
+    position:fixed !important;
+    top: calc(50vh - 50vw) !important;
+    left: calc(50vw - 50vh) !important;
+    z-index: 20000; !important;
+}
