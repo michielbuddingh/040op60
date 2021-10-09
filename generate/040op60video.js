@@ -53,6 +53,10 @@ window.addEventListener('popstate', function(event) {
 function rotate(playerStatus) {
     let videoElement = document.getElementById('existing-iframe-example');
 
+    if (document.documentElement.clientWidth > document.documentElement.clientHeight) {
+	return;
+    }
+
     // playing // paused // buffering
     if (playerStatus == 1 || playerStatus === 2 || playerStatus === 3) {
 	_04060roteerVideo(videoElement);
