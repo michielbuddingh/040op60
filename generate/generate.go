@@ -45,7 +45,7 @@ func ytEmbedUrl(url string) string {
 	const prefix = "https://www.youtube.com/watch?v="
 	if len(url) > len(prefix) {
 		if url[:len(prefix)] == prefix {
-			return "https://youtube.com/embed/" + url[len(prefix):]
+			return "https://www.youtube.com/embed/" + url[len(prefix):]
 		}
 	}
 	return url
