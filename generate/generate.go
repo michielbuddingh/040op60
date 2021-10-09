@@ -41,6 +41,16 @@ type Merk struct {
 	Filename string
 }
 
+func ytEmbedUrl(url string) string {
+	const prefix = "https://www.youtube.com/watch?v="
+	if len(url) > len(prefix) {
+		if url[:len(prefix)] == prefix {
+			return "https://youtube.com/embed/" + url[len(prefix):]
+		}
+	}
+	return url
+}
+
 
 func main() {
 	var err error
@@ -102,7 +112,8 @@ func main() {
 			cur.Stappenplan = filepath
 		}
 		if info.Name() == "video" {
-			cur.Video, _ = textFromPath(filepath)
+			vidUrl, _ := textFromPath(filepath)
+			cur.Video = ytEmbedUrl(vidUrl)
 		}
 
 		return nil
