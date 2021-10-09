@@ -84,6 +84,7 @@
       <main class="mdl-layout__content">
 	<div class="mdl-layout__tab-panel is-active" id="vinduwketel">
 
+	  {{if .Video}}
 	  <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
 	    <div class="mdl-card mdl-cell mdl-cell--12-col" style="padding-top: 56%">
 	      <iframe id="existing-iframe-example"
@@ -100,6 +101,7 @@
 	      </div>
             </div>
 	  </section>
+	  {{end}}
 
 	  <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
 	    <div class="mdl-card mdl-cell mdl-cell--12-col" style="">
