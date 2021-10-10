@@ -93,6 +93,10 @@ func main() {
 			}
 		}
 
+		if info.Name() == "logo.svg" {
+			curMerk.Logo = filepath
+		}
+
 		if info.Name() == "merknaam.txt" {
 			curMerk.Naam, _ = textFromPath(filepath)
 		}
@@ -119,15 +123,25 @@ func main() {
 		return nil
 	})
 
+	if curMerk != nil {
+		if cur != nil {
+			curMerk.Ketels = append(curMerk.Ketels, cur)
+		}
+		merken = append(merken, curMerk)
+	}
+	if cur != nil {
+		ketels = append(ketels, cur)
+	}
+
 
 	if err != nil {
 		fmt.Printf("error walking the path %v\n", err)
 		return
 	}
 
-	for _, k := range ketels {
-		fmt.Printf("%s, %#v\n", k.Ketelnaam, k.Merk)
-	}
+	// for _, k := range ketels {
+	// 	//		fmt.Printf("%s, %#v\n", k.Ketelnaam, k.Merk)
+	// }
 
 	templ, err := template.ParseFiles("ketel-template.html")
 	if err != nil {
@@ -161,6 +175,23 @@ func main() {
 		f, err := os.Create(p + "/" + merken[mi].Filename + ".html")
 		if err == nil {
 			merktempl.Execute(f, merken[mi])
+		}
+		f.Close()
+	}
+
+	{
+		overzichttempl, err := template.ParseFiles("merkkeuze-template.html")
+		if err != nil {
+			log.Fatalf("Could not open merkkeuze template")
+		}
+		merkOverzicht := struct{
+			Merken []*Merk
+		}{merken}
+
+		p := "out/out/" + "../ketels/overzicht.html"
+		f, err := os.Create(p)
+		if err == nil {
+			overzichttempl.Execute(f, merkOverzicht)
 		}
 		f.Close()
 	}
