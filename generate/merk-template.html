@@ -94,34 +94,39 @@
 	      <div class="mdl-card__supporting-text">
 		<h4>{{$merk.Naam}} {{$ketel.Ketelnaam}}</h4>
 	      </div>
-	    <a href="../{{$ketel.Path}}/{{$ketel.Filename}}.html" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-	      {{$merk.Naam}} {{$ketel.Ketelnaam}}
-	    </a>
 
+	      <div class="mdl-card__supporting-text">
+		<a href="../{{$ketel.Path}}/{{$ketel.Filename}}.html">
+		   <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+		     {{$merk.Naam}} {{$ketel.Ketelnaam}}
+		   </button>
+		 </a>
+	      </div>
 	  </section>
 
 	  {{end}}
 
-
-	</div>
-
-	<div class="mdl-layout__tab-panel" id="contact">
-
-	  <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
-              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
-                <h4 class="mdl-cell mdl-cell--12-col">Over 040energie</h4>
-		<div class="section__text mdl-cell mdl-cell--12-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-		  <p>
-		    040energie is een Eindhovense vereniging met 1600 leden zonder winstoogmerk waarbij vrijwilligers hun straat-, buurt- en stadsgenoten helpen om energie te besparen en zelf lokaal duurzame energie op te wekken op een betaalbare manier.
-		  </p>
-		</div>
+              <div class="mdl-card__supporting-text">
+		<h4>Het model van uw ketel staat er niet bij?</h4>
+		<p>
+		  Staat het model van uw ketel niet in de bovenstaande
+		  lijst?  Dan kunt u contact opnemen met de vrijwilligers van het 040energie
+		  bespaarloket.
+		</p>
 	      </div>
-	    </div>
+	      <div class="mdl-card__actions">
+	      <a href="https://040energie.nl/bespaar/loket/">
+		<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised">
+		  Contact Opnemen
+		</button>
+	      </a>
+	      </div>
+            </div>
 	  </section>
 
 	</div>
-
         <footer class="mdl-mega-footer">
           <div class="mdl-mega-footer--middle-section">
             <div class="mdl-mega-footer--drop-down-section">

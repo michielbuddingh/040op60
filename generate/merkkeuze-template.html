@@ -86,14 +86,36 @@
 	  <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
             <div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
               <div class="mdl-card__supporting-text">
-		<h4>Merk CV-ketel</h4>
-		Nu volgt een lijst van de meest voorkomende merken van
-		CV-ketels in Nederland.  Kies het merk van uw CV-ketel
-		om door te gaan naar een lijst waarin u het specifieke
-		<em>type</em> van uw ketel kunt vinden.
-              </div>
+		<h4>Welkom bij 040 op 60</h4>
+		<p>
+		  Deze website is alleen voor mobiele telefoon. Hij helpt je je ketel op 60 zetten.
+		  Loop naar de ketel en volg de 4 stappen:
+		</p>
+		<ol>
+		  <li>Selecteer het merk van je ketel</li>
+		  <li>Selecteer het model van je ketel</li>
+		  <li>Bekijk het filmpje (niet voor alle ketels)</li>
+		  <li>Lees de handleiding en zet hem op 60</li>
+		</ol>
+
+		<p>
+		  Het is erg makkelijk. 040energie vrijwilligers helpen als dat nodig is.
+		  Als het niet bevalt op 60 zet je je ketel ook weer terug met deze website.
+		  Loop nu naar je ketel en…
+		</p>
+	      </div>
+	      <div class="mdl-card__supporting-text">
+		<h4>Selecteer Merk</h4>
+		<p>
+		  Schuif het scherm omhoog en selecteer het merk van je ketel.
+		</p>
+
+	      </div>
             </div>
 	  </section>
+
+
+
 
 
 	  <div style="display:flex; flex-wrap: wrap;" class="outercard">
@@ -107,9 +129,12 @@
 	      <!-- </div> -->
 	    </div>
 	    <div class="mdl-card__actions mdl-card--border">
-	      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{$merk.Path}}/{{$merk.Filename}}.html">
-		Ik heb een {{$merk.Naam}}-ketel
-	      </a>
+
+		<a href="{{$merk.Path}}/{{$merk.Filename}}.html">
+		   <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised">
+		     Ik heb een {{$merk.Naam}}-ketel
+		   </button>
+		 </a>
 	    </div>
 	  </div>
 
@@ -125,10 +150,14 @@
                 Staat het merk van uw ketel niet in de bovenstaande
                 lijst?  Dan kunt u contact opnemen met de vrijwilligers van het 040energie
                 bespaarloket.
-              </div>
-              <div class="mdl-card__actions">
-                <a href="https://040energie.nl/bespaar/loket/" class="mdl-button">Contact opnemen</a>
-              </div>
+	      </div>
+	      <div class="mdl-card__actions">
+	      <a href="https://040energie.nl/bespaar/loket/">
+		<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised">
+		  Contact Opnemen
+		</button>
+	      </a>
+	      </div>
             </div>
 	  </section>
 

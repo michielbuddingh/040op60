@@ -101,20 +101,49 @@
 	      </div>
             </div>
 	  </section>
+	  {{else}}
+	  <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+	      <div class="mdl-card__supporting-text">
+		<h4>Geen video beschikbaar</h4>
+		<p>
+		  Voor de {{.Merk.Naam}} {{.Ketelnaam}} hebben we
+		  helaas geen video beschikbaar.
+		</p>
+	      </div>
+            </div>
+	  </section>
+
 	  {{end}}
 
 	  <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+	    <div class="mdl-card__supporting-text">
+		<h4>Handleiding</h4>
+	      </div>
 	    <div class="mdl-card mdl-cell mdl-cell--12-col" style="">
 	      <img src="../../../../{{.Stappenplan}}" width="100%">
+	      </div>
+	    <div class="mdl-card__supporting-text">
+
+	      <a href="{{.Merk.Path}}/{{.Merk.Filename}}.html">
+		<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--colored">
+		  Op 60!
+		</button>
+	      </a>
+
+	      <a href="../../{{.Merk.Path}}/{{.Merk.Filename}}.html">
+		<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised">
+		  Terug
+		</button>
+	      </a>
+
+	      <a href="{{.Merk.Path}}/{{.Merk.Filename}}.html">
+		<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised">
+		  Hulp
+		</button>
+	      </a>
 	    </div>
 	  </section>
-
-	  <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-	    <div class="mdl-card mdl-cell mdl-cell--12-col" style="">
-	      <img src="../../../../{{.Ketelherkenning}}" width="100%">
-	    </div>
-	  </section>
-
 
 	  <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
 	    <div class="mdl-card__supporting-text">
