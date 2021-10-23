@@ -1,3 +1,17 @@
 .cv-merk-wide {
     margin-bottom: 48px;
 }
+
+
+.larger-text040 > * {
+    line-height: 28px;
+    font-size: 18px;
+}
+
+.larger-text040 > h4 {
+    font-size: 32px;
+}
+
+.mdl-button.larger-text040 {
+    font-size: 18px;
+}
