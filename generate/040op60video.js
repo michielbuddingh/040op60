@@ -66,12 +66,10 @@ function rotate(playerStatus) {
 }
 
 function onPlayerStateChange(event) {
-    console.log("playerstatechange");
     rotate(event.data);
 }
 
 function onPlayerReady(event) {
-    console.log("onplayerready");
     player.addEventListener("onStateChange", onPlayerStateChange);
 }
 

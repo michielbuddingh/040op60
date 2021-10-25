@@ -68,43 +68,44 @@
   </head>
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
       <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
-	<div class="mdl-layout__header-row mdl-layout--large-screen-only">
-	  <img src="../media/040op60logo.svg" alt="040 op 60" />
+	<div class="mdl-layout__header-row">
+	  <img src="../../../040energie_logo.svg" alt="040 op 60" />
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
-        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-          <a href="#vinduwketel" class="mdl-layout__tab is-active">{{.Naam}}</a>
-	  <a href="#contact" class="mdl-layout__tab">Contact</a>
-        </div>
       </header>
+
       <main class="mdl-layout__content">
 	<div class="mdl-layout__tab-panel is-active" id="vinduwketel">
+
+	  <div style="display:flex; flex-wrap: wrap;" class="outercard">
 
 	  {{$merk := .}}
 	  {{range $ketel := .Ketels}}
 
-	  <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-	    <div class="mdl-card mdl-cell mdl-cell--12-col" style="">
+	  <div class="cv-merk-wide mdl-card mdl-grid mdl-shadow--2dp">
+	    <div class="mdl-card__title" style="display:flex; justify-content: center; align-items: center;">
 	      <img src="../../../{{$ketel.Ketelherkenning}}" width="100%">
+	     </div>
+	      <div class="mdl-card__supporting-text larger-text040">
+		<h5>{{$merk.Naam}} {{$ketel.Ketelnaam}}</h5>
 	      </div>
-	      <div class="mdl-card__supporting-text">
-		<h4>{{$merk.Naam}} {{$ketel.Ketelnaam}}</h4>
-	      </div>
-
-	      <div class="mdl-card__supporting-text">
-		<a href="../{{$ketel.Path}}/{{$ketel.Filename}}.html">
-		   <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-		     {{$merk.Naam}} {{$ketel.Ketelnaam}}
+	    <div class="mdl-card__actions mdl-card--border">
+	      <a href="../{{$ketel.Path}}/{{$ketel.Filename}}.html">
+		   <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect larger-text040">
+		     {{$ketel.Ketelnaam}}
 		   </button>
-		 </a>
-	      </div>
-	  </section>
+	      </a>
+	    </div>
+	  </div>
 
 	  {{end}}
+
+	  </div> <!-- style="display:flex;" class="outercard"-->
 
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
