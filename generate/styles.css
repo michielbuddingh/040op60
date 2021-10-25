@@ -15,7 +15,7 @@
  */
 
 html, body {
-  font-family: 'Roboto', 'Helvetica', sans-serif;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -70,13 +70,13 @@ html, body {
   height: auto;
 }
 .mdl-demo .mdl-card .mdl-card__supporting-text {
-  margin: 40px;
+  margin: 14px;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   padding: 0;
   color: inherit;
-  width: calc(100% - 80px);
+  width: calc(100% - 28px);
 }
 .mdl-demo.mdl-demo .mdl-card__supporting-text h4 {
   margin-top: 0;
