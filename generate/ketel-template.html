@@ -84,14 +84,32 @@
 	<div class="mdl-layout__tab-panel is-active" id="vinduwketel">
 
 	  {{if .Video}}
+	  <div class="title040-wide mdl-card mdl-grid mdl-shadow--2dp">
+	    <div class="mdl-card__title" style="display:flex; justify-content: center; align-items: center;">
+		  <h4>Filmpje + Handleiding</h4>
+	     </div>
+	  </div>
+	  {{else}}
+	  <div class="title040-wide mdl-card mdl-grid mdl-shadow--2dp">
+	    <div class="mdl-card__title" style="display:flex; justify-content: center; align-items: center;">
+		  <h4>Handleiding</h4>
+	     </div>
+	  </div>
+	  {{end}}
+
+	  {{if .Video}}
 	  <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+	    <div class="mdl-cell mdl-cell--12-col">
+	      <div class="mdl-card__supporting-text larger-text040">
+		<h5>{{.Merk.Naam}} {{.Ketelnaam}}</h5>
+	      </div>
+            </div>
 	    <div class="mdl-card mdl-cell mdl-cell--12-col" style="padding-top: 56%">
 	      <iframe id="existing-iframe-example"
 		      style="position:absolute;left:0;top:0;height: 100%;" src="{{.Video}}?enablejsapi=1" allowfullscreen frameborder="0"></iframe>
 	    </div>
             <div class="mdl-card mdl-cell mdl-cell--12-col">
 	      <div class="mdl-card__supporting-text larger-text040">
-		<h4>{{.Merk.Naam}} {{.Ketelnaam}}</h4>
 		<p>
 		  Klik op de video hierboven om deze in een volledig
 		  scherm af te spelen.
@@ -219,5 +237,10 @@
 
     <script src="../../../../../material.js"></script>
     <script src="../../../../040op60video.js" language="javascript"></script>
+    <script language="javascript">
+      document.cookie = "merk={{.Merk.Naam}}; SameSite=strict; max-age=86400; Secure;";
+      document.cookie = "ketel={{.Ketelnaam}}; SameSite=strict; max-age=86400; Secure;";
+    </script>
+
   </body>
 </html>

@@ -2,6 +2,10 @@
     margin-bottom: 48px;
 }
 
+.title040-wide.mdl-card {
+    min-height: auto;
+    margin-bottom: 16px;
+}
 
 .larger-text040 > * {
     line-height: 28px;
@@ -15,4 +19,12 @@
 
 .mdl-button.larger-text040 {
     font-size: 18px;
+}
+
+.mdl-layout__header-row {
+    height: 72px;
+}
+
+.mdl-layout--large-screen-only.mdl-layout__header-row {
+    height: 12px;
 }

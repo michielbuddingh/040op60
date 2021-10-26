@@ -83,6 +83,13 @@
       <main class="mdl-layout__content">
 	<div class="mdl-layout__tab-panel is-active" id="vinduwketel">
 
+	  <div class="cv-merk-wide mdl-card mdl-grid mdl-shadow--2dp">
+	    <div class="mdl-card__title" style="display:flex; justify-content: center; align-items: center;">
+		  <h4>Schuif het scherm omhoog en selecteer het merk van je ketel.</h4>
+	     </div>
+	  </div>
+
+
 	  <div style="display:flex; flex-wrap: wrap;" class="outercard">
 
 	  {{$merk := .}}
@@ -187,5 +194,8 @@
 
     <script src="../../../../material.js"></script>
     <script src="../../../../040op60video.js" language="javascript"></script>
+    <script language="javascript">
+      document.cookie = "merk={{.Naam}}; SameSite=strict; max-age=86400; Secure;";
+    </script>
   </body>
 </html>
