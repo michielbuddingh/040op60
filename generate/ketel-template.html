@@ -162,6 +162,7 @@
 	    </div>
 	  </section>
 
+	  {{if or .Gebruikershandleiding .Servicehandleiding}}
 	  <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
 	    <div class="mdl-card__supporting-text larger-text040">
 	      <h4>Overige informatie</h4>
@@ -169,13 +170,18 @@
 		Als er nog meer informatie over de {{.Merk.Naam}} {{.Ketelnaam}} beschikbaar is, vindt u die hier.
 	      </p>
 	    </div>
-	    <a href="econpact-225c.html" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+	    {{if .Gebruikershandleiding}}
+	    <a href="{{.Gebruikershandleiding}}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
 	      Gebruikershandleiding
 	    </a>
-	    <a href="econpact-225c.html" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+	    {{end}}
+	    {{if .Servicehandleiding}}
+	    <a href="{{.Servicehandleiding}}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
 	      Installateurshandleiding
 	    </a>
+	    {{end}}
 	  </section>
+	  {{end}}
 
 	</div>
 

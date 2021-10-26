@@ -30,6 +30,8 @@ type Ketel struct {
 	Video string
 	Path string
 	Filename string
+	Gebruikershandleiding string
+	Servicehandleiding string
 }
 
 
@@ -105,6 +107,14 @@ func main() {
 			cur.Ketelherkenning = filepath
 		}
 
+		if info.Name() == "glink" {
+			cur.Gebruikershandleiding, _ = textFromPath(filepath)
+		}
+
+		if info.Name() == "slink" {
+			cur.Servicehandleiding, _ = textFromPath(filepath)
+		}
+
 		if info.Name() == "ketel.png" {
 			cur.Ketelherkenning = filepath
 		}
@@ -145,7 +155,7 @@ func main() {
 
 	templ, err := template.ParseFiles("ketel-template.html")
 	if err != nil {
-		log.Fatalf("Could not open template")
+		log.Fatalf("Could not open template `ketel-template.html`: %s", err)
 	}
 
 	for ki := range ketels {
