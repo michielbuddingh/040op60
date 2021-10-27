@@ -28,3 +28,13 @@
 .mdl-layout--large-screen-only.mdl-layout__header-row {
     height: 12px;
 }
+
+.mdl-button--fab.install040 {
+    position:absolute;
+    right:80px;
+    top: 48px;
+}
+
+.mdl-button--fab.install040.hidden040 {
+    display: none;
+}

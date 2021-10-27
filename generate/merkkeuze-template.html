@@ -25,26 +25,23 @@
 
     <meta name="description" content="Zet uw CV-ketel op 60 graden!" />
 
+    <link rel="manifest" href="040op60.webmanifest">
+
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes" />
-    <link rel="icon" sizes="192x192" href="images/android-desktop.png" />
+    <link rel="icon" sizes="192x192" href="../../040op60_192x192.png" />
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="apple-mobile-web-app-title" content="040 op 60" />
-    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png" />
+    <link rel="apple-touch-icon-precomposed" href="../../040op60_152x152.png" />
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png" />
+    <meta name="msapplication-TileImage" content="../../040op60_144x144.png" />
     <meta name="msapplication-TileColor" content="#3372DF" />
 
-    <link rel="shortcut icon" href="images/favicon.png" />
-
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
+    <link rel="shortcut icon" href="../../040op60_32x32.png" />
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -75,6 +72,10 @@
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
+          <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp install040 hidden040" id="installeren">
+            <i class="material-icons" role="presentation">install_mobile</i>
+            <span class="visuallyhidden">Installeren</span>
+          </button>
       </header>
       <main class="mdl-layout__content">
 	<div class="mdl-layout__tab-panel is-active" id="vinduwketel">
@@ -160,7 +161,6 @@
 	  </section>
 
 	</div>
-
         <footer class="mdl-mega-footer">
           <div class="mdl-mega-footer--middle-section">
             <div class="mdl-mega-footer--drop-down-section">
@@ -216,7 +216,6 @@
         </footer>
       </main>
     </div>
-
     <script src="../../../material.js"></script>
     <script src="../../040op60video.js" language="javascript"></script>
   </body>
