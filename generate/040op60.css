@@ -38,3 +38,7 @@
 .mdl-button--fab.install040.hidden040 {
     display: none;
 }
+
+.mdl-card.nominheight040 {
+    min-height: auto;
+}

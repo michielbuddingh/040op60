@@ -116,7 +116,7 @@
 	  </section>
 	  {{else}}
 	  <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
+            <div class="mdl-card mdl-cell mdl-cell--12-col nominheight040">
 	      <div class="mdl-card__supporting-text larger-text040">
 		<h4>Geen video beschikbaar</h4>
 		<p>
@@ -157,6 +157,27 @@
 	      </a>
 	    </div>
 	  </section>
+
+	  {{if .Video}}
+	  {{else}}
+	  <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+	    <div class="mdl-card__supporting-text larger-text040">
+	      <h4>Maak een filmpje van deze ketel voor anderen!</h4>
+	    </div>
+	    <div class="mdl-card__supporting-text">
+	      <p>Is het gelukt, en wilt u anderen helpen deze ketel op 60 te zetten?  Neem dan contact met
+	      ons op via de onderstaande knop!
+	      </p>
+	      <a href="https://040energie.nl/bespaar/help-bij-60/">
+		<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--raised mdl-button--colored larger-text040">
+		  Maak zelf een filmpje
+		</button>
+	      </a>
+	    </div>
+	  </section>
+	  {{end}}
+
+
 
 	  {{if or .Gebruikershandleiding .Servicehandleiding}}
 	  <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
