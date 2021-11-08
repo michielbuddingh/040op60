@@ -129,6 +129,7 @@
 
 	  {{end}}
 
+	  {{if .Stappenplan}}
 	  <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
 	    <div class="mdl-card__supporting-text larger-text040">
 		<h4>Handleiding</h4>
@@ -157,14 +158,46 @@
 	      </a>
 	    </div>
 	  </section>
-
-	  {{if .Video}}
 	  {{else}}
+	  <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+	    <div class="mdl-card__supporting-text larger-text040">
+	      <h4>
+		<b>Merk:</b>{{.Merk.Naam}}<br />
+		<b>Type:</b>{{.Ketelnaam}}<br />
+	      </h4>
+	      <p>
+		<span style="font-color: red">Deze ketel kunt u niet zelf aanpassen.  Vraag het aan de installateur
+		bij de volgende onderhoudsbeurt</span><br/>
+	      </p>
+	      <h5>Tips om je huis nog efficiënter te verwarmen:</h5><br/>
+	      <ol>
+		<li>
+		  <b>Radiatorfolie:</b> Door folie achterop de
+		  radiator te plakken, voorkom je dat warmte onbenut
+		  door de muur verdwijnt.  Een goedkope, eenvoudige
+		  isolatie-oplossing en één van de meest
+		  klimaat-effectieve producten op de markt.  <a
+		  href="https://samensnellerduurzaam.nl/tips/tonzon/">https://samensnellerduurzaam.nl/tips/tonzon/</a>
+		</li>
+		<li><b>Radiatorventilator:</b> Door ventilatoren onder
+		de radiatoren te installeren, wordt de woning gelijkmatiger en 2 keer zo snel warm.  Ideaal in
+		combinatie met een lage cv-keteltemperatuur!  <a href="https://samensnellerduurzaam.nl/tips/speedcomfort/">https://samensnellerduurzaam.nl/tips/speedcomfort/</a>
+		</li>
+	      </ol>
+	      <p>Voor nog meer praktische tips over o.a. wonen, energiebesparing, voedsel, reizen, lifestyle, hergebruik en groen, ga naar:
+	      <a href="https://www.samensnellerduurzaam.nl/">https://www.samensnellerduurzaam.nl</a>
+	      </p>
+	    </div>
+	  </section>
+	  {{end}}
+
+	  {{if eq .Video ""}}
+	  {{if ne .Stappenplan ""}}
 	  <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
 	    <div class="mdl-card__supporting-text larger-text040">
 	      <h4>Maak een filmpje van deze ketel voor anderen!</h4>
 	    </div>
-	    <div class="mdl-card__supporting-text">
+	    <div class="mdl-card__supporting-text larger-text040">
 	      <p>Is het gelukt, en wilt u anderen helpen deze ketel op 60 te zetten?  Neem dan contact met
 	      ons op via de onderstaande knop!
 	      </p>
@@ -175,6 +208,7 @@
 	      </a>
 	    </div>
 	  </section>
+	  {{end}}
 	  {{end}}
 
 
